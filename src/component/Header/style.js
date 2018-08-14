@@ -15,7 +15,7 @@ background-size: contain;
 `
 export const Container = styled.div `
 position: relative;
-width: 960px;
+width: 60%;
 height: 100%;
 padding-left: 15px;
 padding-right: 30px;
@@ -43,15 +43,15 @@ color: #333;
 }
 &.search {
     position: relative;
+    padding: 0;
     top: 9px;
-    padding: 0 40px 0 20px;
     height: 38px;
     line-height: 38px;
     font-size: 14px;
     border: 1px solid #eee;
     border-radius: 40px;
     background: #eee;
-
+    margin: 0 15px;
     .search-input {
       padding: 0 40px 0 20px;
       width: 160px;
@@ -67,18 +67,8 @@ color: #333;
     color: #969696;
 }
 `
-// 搜索的ICON
-export const SearchIcon = styled.div`
-position: absolute;
-top: 4px;
-right: 5px;
-width: 30px;
-height: 30px!important;
-line-height: normal!important;
-padding: 0!important;
-color: #969696!important;
-text-align: center;
-`;
+
+//左侧按钮
 export const Button = styled.a `
 float: right;
 width: 80px;
@@ -90,7 +80,6 @@ border: 1px solid rgba(236,97,73,.7);
 border-radius: 20px;
 font-size: 15px;
 color: #ea6f5a;
-background-color: transparent;
 &.writeArc {
     padding: 0px 12px;
     margin: 8px 15px 0;
@@ -101,16 +90,55 @@ background-color: transparent;
     }
 }
 `
+// 搜索输入框
 export const NavSearch = styled.input.attrs({
-    autocomplete: "off",
+    id: 'search',
+    autoComplete: "off",
     placeholder: "搜索"
 })`
 border: none;
 outline: none;
 width: 70px;
+height: 100%;
+padding: 0 40px 0 20px;
 background: transparent;
-&:placeholder{
-    color:#f04848;
-    font-size: 16px;
+font-size: 14px;
+
+&::placeholder{
+    color:#999;
+}
+&.fouced{
+    width: 160px;
+}
+&.slide-enter{
+    transition: all .2s ease-out;
+}
+&.slide-enter-active{
+    width: 160px;
+}
+&.slide-exit{
+    transition: all .2s ease-out;
+}
+&.slide-exit-active{
+    width: 70px;
 }
 `
+// 搜索的ICON
+export const SearchIcon = styled.label.attrs({
+    htmlFor: 'search'
+})`
+border-radius: 50%;
+position: absolute;
+top: 4px;
+right: 5px;
+width: 30px;
+height: 30px;
+line-height: 30px;
+padding: 0!important;
+color: #969696;
+text-align: center;
+&.fouced-icon {
+    background-color: #969696;
+    color: #fff;
+}
+`;

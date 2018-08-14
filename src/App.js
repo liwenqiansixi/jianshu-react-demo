@@ -1,10 +1,12 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
+import {Provider} from 'react-redux';
 import Header from './component/Header'
 class App extends Component{
     render(){
-        return (<Fragment>
+        return (
+        <Provider store={store}>
             <Header></Header>
-        </Fragment>);
+        </Provider>);
     }
 };
 export default App;
