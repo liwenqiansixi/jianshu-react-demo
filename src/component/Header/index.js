@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import {connect} from 'react-redux';
+import {actionCreators} from './store/index';
 import {
     HeaderWrapper,
     JianshuLogo,
@@ -10,15 +11,7 @@ import {
     NavSearch,
     SearchIcon
 } from './style';
-class App extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            fouced: false
-        }
-        this.handleInputFocus.bind(this);
-        this.handleInputBlur.bind(this);
-    }
+class Header extends Component{
     render(){
         return (
         <HeaderWrapper>
@@ -28,17 +21,17 @@ class App extends Component{
                 <Nav className="left download">下载APP</Nav>
                 <Nav className="left search">
                     <CSSTransition
-                        in={this.state.fouced}
+                        in={this.props.fouced}
                         timeout={200}
                         classNames="slide"
                       >
                         <NavSearch 
-                            className={this.state.fouced ? 'fouced': ''}
-                            onFocus={this.handleInputFocus}
-                            onBlur={this.handleInputBlur}
+                            className={this.props.fouced ? 'fouced': ''}
+                            onFocus={this.props.inputFocus}
+                            onBlur={this.props.inputBlur}
                         ></NavSearch>
                     </CSSTransition>
-                    <SearchIcon className={this.state.fouced ? 'fouced-icon': ''}>
+                    <SearchIcon className={this.props.fouced ? 'fouced-icon': ''}>
                         <i className='iconfont'>&#xe652;</i>
                     </SearchIcon>
                 </Nav>
@@ -51,25 +44,21 @@ class App extends Component{
             <Button>注册</Button>
         </HeaderWrapper>);
     };
-    handleInputFocus = ()=> {
-        this.setState(()=>({
-            fouced: true
-        }))
-    }
-    handleInputBlur = ()=> {
-        this.setState(()=>({
-            fouced: false
-        }))
-    }
 };
 const mapStateToProps = (store)=>{
     return {
-
+        fouced: store.header.fouced
     }
 }
-const mapDispatchToProps = (dispath) => {
+console.log('actionCreators', actionCreators);
+const mapDispathToProps = (dispatch) => {
     return {
-        
+        inputFocus(){
+            dispatch(actionCreators.handleInputFocus())
+        },
+        inputBlur(){
+            dispatch(actionCreators.handleInputBlur())
+        }
     }
 }
-export default connect(null, null)(App);
+export default connect(mapStateToProps, mapDispathToProps)(Header);
