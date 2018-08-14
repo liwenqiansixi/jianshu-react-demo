@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import {connect} from 'react-redux';
 import {actionCreators} from './store/index';
+import {fromJS} from 'immutable';
 import {
     HeaderWrapper,
     JianshuLogo,
@@ -45,12 +46,12 @@ class Header extends Component{
         </HeaderWrapper>);
     };
 };
+// 此时传入的store为与connect链接全局的store
 const mapStateToProps = (store)=>{
     return {
-        fouced: store.header.fouced
+        fouced: store.getIn(['header', 'fouced'])
     }
 }
-console.log('actionCreators', actionCreators);
 const mapDispathToProps = (dispatch) => {
     return {
         inputFocus(){
