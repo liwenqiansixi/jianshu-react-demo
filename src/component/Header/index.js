@@ -119,7 +119,7 @@ const mapDispathToProps = (dispatch) => {
         changePage(page, totalPage, spinIcon){
             let originAngle = spinIcon.style.transform.replace(/[^0-9]/ig, '')
             if (originAngle) {
-                originAngle = parseInt(originAngle)
+                originAngle = parseInt(originAngle, 10)
             } else {
                 originAngle = 0
             }
