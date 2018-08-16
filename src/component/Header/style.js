@@ -41,27 +41,6 @@ color: #333;
     }
     float: left;
 }
-&.search {
-    position: relative;
-    padding: 0;
-    top: 9px;
-    height: 38px;
-    line-height: 38px;
-    font-size: 14px;
-    border: 1px solid #eee;
-    border-radius: 40px;
-    background: #eee;
-    margin: 0 15px;
-    .search-input {
-      padding: 0 40px 0 20px;
-      width: 160px;
-      height: 38px;
-      font-size: 14px;
-      border: 1px solid #eee;
-      border-radius: 40px;
-      background: #eee;
-    }
-}
 &.right{
     float: right;
     color: #969696;
@@ -142,3 +121,70 @@ text-align: center;
     color: #fff;
 }
 `;
+// 热门搜索
+export const SearchContent = styled.div`
+&.left{
+    float: left;
+}
+&.search {
+    position: relative;
+    padding: 0;
+    top: 9px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    border-radius: 40px;
+    background: #eee;
+    margin: 0 15px;
+    .search-input {
+      padding: 0 40px 0 20px;
+      width: 160px;
+      height: 38px;
+      font-size: 14px;
+      border: 1px solid #eee;
+      border-radius: 40px;
+      background: #eee;
+    }
+}
+`
+export const SearchInfo = styled.div`
+position: absolute;
+left:0;
+top: 56px;
+width: 240px;
+padding: 0 20px;
+box-shadow: 0 0 8px rgba(0,0,0,.2)
+`;
+export const SearchInfoTitle = styled.span`
+margin-top: 20px;
+margin-bottom: 15px;
+font-size: 14px;
+color: #969696;
+line-height: 20px;`
+export const SearchInfoSwitch = styled.a`
+font-size: 13px;
+float: right;
+color: #787878;
+.iconfont{
+    display: inline-block
+    margin-right: 5px;
+    font-size: 12px;
+    transition: all .2s ease-in;
+    transfor-origin: center center;
+}
+`
+export const SearchInfoList = styled.ul`
+overflow:hidden`;
+export const SearchInfoItem = styled.a.attrs({
+    href: '#'
+})`
+float: left;
+line-height: 20px;
+padding: 0 5px;
+font-size: 12px;
+border: 1px solid #ddd;
+border-radius: 3px;
+margin-right: 10px;
+margin-bottom: 15px;
+color: #787878`
