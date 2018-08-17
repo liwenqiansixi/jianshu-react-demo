@@ -3,6 +3,7 @@ import List from './component/List'
 import Recommend from './component/Recommend'
 import Topic from './component/Topic'
 import Write from './component/Write'
+import BackToTop from './component/BackToTop'
 import {
     HomeWrapper,
     HomeLeft,
@@ -23,6 +24,7 @@ class Home extends Component{
 					<Recommend />
 					<Write />
 				</HomeRight>
+                <BackToTop/>
             </HomeWrapper>
         )
     }

@@ -4,12 +4,14 @@ import {
     ListItem,
     ListItemContent,
     ListImg,
-    ListMeta
+    ListMeta,
+    ListReadMore
 } from '../style'
 import {connect} from 'react-redux'
+import {actionCreater} from '../store'
 class List extends Component{
     render(){
-        const {articleList} = this.props
+        const {articleList, readMore, listPage} = this.props
         const haveImg = (img, title) => {
             if (img.length > 0) {
                 return (
@@ -23,9 +25,9 @@ class List extends Component{
         }
         return(
             <ListWrapper>
-                {articleList.map((item)=>{
+                {articleList.map((item, index)=>{
                     return (
-                        <ListItem key={item.get('id')} className={item.get('imgUrl').length > 0 ? 'have-img': ''} id={item.get('id')}>
+                        <ListItem key={index} className={item.get('imgUrl').length > 0 ? 'have-img': ''} id={item.get('id')}>
                             {haveImg(item.get('imgUrl'), item.get('title'))}
                             <ListItemContent>
                                 <a className="title" target="_blank" href={item.get('link')}>{item.get('title')}</a>
@@ -43,13 +45,24 @@ class List extends Component{
                         </ListItem>
                     )
                 })}
+                <ListReadMore onClick={()=> {readMore(listPage)}}>阅读更多</ListReadMore>
             </ListWrapper>
         )
     }
 }
 const mapState = (state) => {
     return {
-        articleList: state.getIn(['home', 'articleList'])
+        articleList: state.getIn(['home', 'articleList']),
+        listPages: state.getIn(['home', 'listPages']),
+        listPage: state.getIn(['home', 'listPage'])
     }
 }
-export default connect(mapState, null)(List)
+const mapDispatch = (dispatch) => {
+    return {
+        readMore: (nextPage) => {
+            // 触发加载更多
+            dispatch(actionCreater.getMoreList(nextPage))
+        }
+    }
+}
+export default connect(mapState, mapDispatch)(List)

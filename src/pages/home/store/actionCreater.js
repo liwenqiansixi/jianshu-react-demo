@@ -6,7 +6,13 @@ const changeData = (res)=> ({
     topicList: res.get('topicList'),
     articleList: res.get('articleList')
 })
-const handleChangeData = () => {
+
+const handleAddMoreList = (data,nextPage) => ({
+    type: typeName.ADD_MORE_LIST,
+    data,
+    nextPage
+})
+export const handleChangeData = () => {
     return (dispatch) => {
         axios.get('./api/home.json').then((res)=> {
             const data = res.data
@@ -17,6 +23,15 @@ const handleChangeData = () => {
         })
     }
 }
-export {
-    handleChangeData
+export const getMoreList = (nextPage) => {
+    return (dispatch)=> {
+        axios.get(`./api/homeList.json?page=${nextPage}`).then((res)=> {
+            const data = res.data
+            if (data.success) {
+                nextPage += 1
+                dispatch(handleAddMoreList(fromJS(data.data), nextPage))
+            }
+            // 获取到原来的list并把新增的添加到
+        })
+    }
 }

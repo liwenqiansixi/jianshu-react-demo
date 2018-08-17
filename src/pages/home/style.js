@@ -22,7 +22,7 @@ export const TopicWrapper = styled.div `
     overflow: hidden;
     padding: 20px 0 10px 0
 `
-export const TopicItem = styled.div`
+export const TopicItem = styled.div `
     float: left;
 	height: 32px;
 	line-height: 32px;
@@ -49,12 +49,12 @@ margin-top: 7px;
 font-size: 14px;
 color: #787878;`
 // 列表页面
-export const ListWrapper = styled.ul`
+export const ListWrapper = styled.ul `
 margin: 0;
 padding: 0;
 list-style: none;
 `
-export const ListItem = styled.li`
+export const ListItem = styled.li `
 position: relative;
 width: 100%;
 margin: 0 0 15px;
@@ -95,7 +95,7 @@ img{
     max-height: 100%;
 }
 `
-export const ListItemContent = styled.div`
+export const ListItemContent = styled.div `
 .title{
     margin: -7px 0 4px;
     display: inherit;
@@ -109,7 +109,7 @@ export const ListItemContent = styled.div`
     -webkit-box-orient:vertical;
     -webkit-line-clamp:2; 
 }`
-export const ListMeta = styled.div`
+export const ListMeta = styled.div `
     padding-right: 0;
     font-size: 12px;
     font-weight: 400;
@@ -128,3 +128,43 @@ export const ListMeta = styled.div`
         color: #b4b4b4;
     }
 `
+// 阅读更多
+export const ListReadMore = styled.div `
+height: 40px;
+margin: 30px auto 60px;
+padding: 10px 15px;
+box-sizing:border-box;
+text-align: center;
+font-size: 15px;
+color: #fff;
+display: block;
+width: 100%;
+border-radius: 20px;
+background-color: #a5a5a5;
+cursor: pointer;
+&:hover{
+    background-color: #9b9b9b;
+}
+`
+// 回到顶部
+export const ToTop = styled.div`
+position: fixed;
+bottom: 40px;
+right: 40px;
+z-index: 1040;
+border-bottom: none;
+background-color: #fff;
+transition: .1s ease-in;
+.btn{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    display: block;
+    border: 1px solid #dcdcdc;
+}
+&:hover{
+    background-color: hsla(0,0%,71%,.1);
+    transition: .1s ease-in;
+}`
