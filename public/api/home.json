@@ -1,0 +1,58 @@
+{
+	"success": true,
+	"data": {
+		"topicList": [{
+			"id": 1,
+			"title": "社会热点",
+			"imgUrl": "//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+		}, {
+			"id": 2,
+			"title": "手手绘",
+			"imgUrl": "//upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+		}],
+		"articleList": [{
+            "id": 1,
+            "title": "熬过去，全世界都是你的",
+            "imgUrl": "http://upload-images.jianshu.io/upload_images/9447054-a757e40c7a3b1697.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
+            "desc": "新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 ",
+            "commentNum": 24,
+            "zanNum": 12,
+            "link": "#",
+            "authorName": "小喵喵"
+        }, {
+			"id": 2,
+			"title": "熬过去，全世界都是你的",
+            "imgUrl": "http://upload-images.jianshu.io/upload_images/9447054-a757e40c7a3b1697.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
+            "desc": "新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 ",
+            "commentNum": 24,
+            "zanNum": 12,
+            "link": "#",
+            "authorName": "小喵喵"
+		}, {
+			"id": 3,
+			"title": "熬过去，全世界都是你的",
+            "imgUrl": "http://upload-images.jianshu.io/upload_images/9447054-a757e40c7a3b1697.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
+            "desc": "新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 ",
+            "commentNum": 24,
+            "zanNum": 12,
+            "link": "#",
+            "authorName": "小喵喵"
+		}, {
+			"id": 4,
+			"title": "熬过去，全世界都是你的",
+            "imgUrl": "http://upload-images.jianshu.io/upload_images/9447054-a757e40c7a3b1697.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
+            "desc": "新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 新雨过后 雨后尘埃洗彻清， 蓝天碧草絮卷飞。 芳华何惧泥一地， 红杏枝头含泪垂。 ",
+            "commentNum": 24,
+            "zanNum": 12,
+            "link": "#",
+            "authorName": "小喵喵"
+		}],
+		"recommendList": [{
+			"id": 1,
+			"imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+		}, {
+			"id": 2,
+			"imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+		}]
+	}
+}

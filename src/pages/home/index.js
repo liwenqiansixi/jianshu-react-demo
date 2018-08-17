@@ -8,6 +8,8 @@ import {
     HomeLeft,
     HomeRight
 } from './style'
+import {connect} from 'react-redux'
+import {actionCreater} from './store'
 class Home extends Component{
     render(){
         return(
@@ -24,5 +26,16 @@ class Home extends Component{
             </HomeWrapper>
         )
     }
+    componentDidMount(){
+        const {changeHomeData} = this.props
+        changeHomeData()
+    }
 }
-export default Home
+const mapDispatch = (dispatch) => {
+    return {
+        changeHomeData: () => {
+            dispatch(actionCreater.handleChangeData())
+        }
+    }
+}
+export default connect(null, mapDispatch)(Home)

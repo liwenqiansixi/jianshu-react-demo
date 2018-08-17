@@ -52,4 +52,7 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 }
+a, body {
+    color: #333;
+}
 `
